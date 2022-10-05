@@ -46,7 +46,8 @@
     <div class="row">
 
         <h2 class="col-md-12 text-center" style="padding-bottom:20px">
-    <span style="font-size:35pt"><b><i>Affection:</i><br> Learning Affective Explanations for<br>
+            <img src="img/page_logo.png" height="150">
+    <span style="font-size:35pt"><br> Learning Affective Explanations for<br>
 Real-World Visual Data</b></span>
         </h2>
     </div>
@@ -58,40 +59,33 @@ Real-World Visual Data</b></span>
             <ul class="list-inline" style="font-size:17pt;">
                 <li>
                     <a href="https://optas.github.io/">
-                        Panos Achlioptas
-                    </a>
-                    <sup>1</sup>
+                        Panos Achlioptas<br></a>                    
+                        <div style ="font-size:12pt; color: black">Snap Inc.</div>                    
                 </li>
                 <li>
                     <a href="http://www.lix.polytechnique.fr/~maks/">
                         Maks Ovsjanikov
                     </a>
-                    <sup>2</sup>
-                </li>                
-                <br>
+                    <div style ="font-size:12pt; color: black">École Polytechnique</div>                    
+                </li>                                
                 <li>
                     <a href="https://geometry.stanford.edu/member/guibas">
                         Leonidas J. Guibas
                     </a>
-                    <sup>3</sup>
+                    <div style ="font-size:12pt; color: black">Stanford University</div>
                 </li>
                 <li>
                     <a href="http://www.stulyakov.com/">
                         Sergey Tulyuakov
                     </a>
-                    <sup>1</sup>
+                    <div style ="font-size:12pt; color: black">Snap Inc.</div>
                 </li>                
             </ul>
-            
-            <ul style="list-style-type:none;">
-                <li style="font-size: 14pt;">Snap Inc.<sup>1</sup></li>
-                <li style="font-size: 14pt;">École Polytechnique<sup>2</sup></li>
-                <li style="font-size: 14pt;">Stanford University<sup>3</sup></li>
-            </ul>
+                    
         </div>
     </div>
  
-    <div class="row" style="padding-top:45px">
+    <div class="row" style="padding-top:40px">
         <div class="col-md-8 col-md-offset-2 text-center">
             <ul class="nav nav-pills nav-justified">
                 <li>
@@ -105,7 +99,7 @@ Real-World Visual Data</b></span>
 
                 <li>
                     <a href="#dataset">
-                        <img src="img/page_logo.png" height="80">
+                        <img src="img/dataset_img.png" height="80">
                         <h4><strong>[Dataset]</strong></h4>
                     </a>
                 </li>
@@ -120,7 +114,7 @@ Real-World Visual Data</b></span>
                 <li>
                     <a href="#code">
                         <img src="img/github.png" height="80">
-                        <h4><strong>[Code]</strong></h4>
+                        <h4><strong>[Code] <br>(coming soon)</strong></h4>
                     </a>
                 </li>
 
@@ -150,7 +144,7 @@ Real-World Visual Data</b></span>
                 an affective response to a given visual stimulus. To embark on this journey, we introduce and
                 share with the research community a large-scale dataset that contains emotional reactions and free-form
                 textual explanations for <b>85K</b> publicly available images, analyzed by 6,283 annotators who were
-                asked to indicate and explain <i><b>how and <u>why</u></b></i> they felt in a particular way when observing a particular
+                asked to indicate and explain <b>how and why</b> they felt in a particular way when observing a particular
                 image, producing a total of <b>526K</b> responses. Even though emotional reactions are subjective
                 and sensitive to context (personal mood, social status, past experiences) – we show that there is
                 significant common ground to capture potentially plausible emotional responses with large support in
@@ -173,8 +167,9 @@ Real-World Visual Data</b></span>
                 <b>Summary of Main Contributions and Findings</b>
             </h3>
             <p class="text-justify"> 
-                <ol>
-                    <li>We curate and share <b>Affection</b>: a large-scale dataset with emotional reactions to <b>real-world</b> images and explanations behind them in free-form language.</li><br>
+                <ol>                                        
+
+                    <li>We curate and share <b>Affection</b> a large-scale dataset with emotional reactions to <b>real-world</b> images and explanations behind them in free-form language.</li><br>
                     <li>We introduce the task of <b><u>E</u>motional <u>E</u>xplanation <u>C</u>aptioning</b> (<b>EAC</b>) and develop correspondingly <i>neural speakers</i> that can create plausible utterances to explain emotions grounded in real-world images.</li><br>
                     <li>Our best neural speaker passes an <b>emotional Turing test</b> with a 65% chance. I.e., its generations are this likely to be thought of as if other humans made them, and not machines, as judged by third-party observing humans.</li><br>
                     <li>Our developed <i>neural listeners</i> and CLIP-based studies indicate that Affection contains significant amounts of discriminative references that enable the identification of its underlying images from the affective explanations. Tapping on this observation, we also experiment and provide <b>pragmatic</b> neural speaking variants.
@@ -191,44 +186,40 @@ Real-World Visual Data</b></span>
                 <b>Qualitative Νeural Speaking Results</b>
             </h3>
 
-                <div class="zoom">
+                <!-- <div class="zoom"> -->
                 <figure style="padding-bottom:80px">
                 <img src="img/generations_teaser_emo_pragma_psych_oriented.jpg" class="img-responsive" style="padding-bottom:10px;" alt="overview">
-                <figcaption style="background-color:Thistle;padding:10px">
-                    <b><font color="white">Curated examples of neural speaker generations on unseen images from the emotion-grounded, pragmatic speaker variant.</b> The top row includes generations that reflect a <b>positive</b> sentiment, while the bottom row showcases generations grounded on <i>similar visual subjects</i> (object classes) e.g., another dog, food item, etc., that give rise to <b>negative</b> emotions. Remarkably, this neural speaker appears to take into account the underlying fine-grained visual differences to properly modulate its output, providing strong <b>explanatory power</b> behind the emotional reactions. Note, also, how the explanations can include purely human-centric semantics (<i>‘nostalgic of my childhood’</i>, <i>‘love coffee’</i>), and use explicit <b>psychological</b> assessments (<i>‘feel content/excited/disgusted’</i>, <i>‘is depressing’</i>). </font>
-                    <!-- The shown images are included in the datasets covered by Affection, no ownership or copyright claim is made by the authors of this article. -->
+                <figcaption style="background-color:#FFECF6;padding:10px">
+                    <b><font color="black">Curated examples of neural speaker generations on unseen images from the emotion-grounded, pragmatic speaker variant.</b> The top row includes generations that reflect a positive sentiment, while the bottom row showcases generations grounded on <i>similar visual subjects</i> (object classes) e.g., another dog, food item, etc., that give rise to negative emotions. Remarkably, this neural speaker appears to take into account the underlying fine-grained visual differences to properly modulate its output, providing strong explanatory power behind the emotional reactions. Note, also, how the explanations can include purely human-centric semantics (<i>‘nostalgic of my childhood’</i>, <i>‘love coffee’</i>), and use explicit psychological assessments (<i>‘feel content/excited/disgusted’</i>, <i>‘is depressing’</i>). </font>                    
                 </figcaption>
                 </figure>
-                </div>
+                <!-- </div> -->
 
-                <div class="zoom">
+                <!-- <div class="zoom"> -->
                 <figure style="padding-bottom:80px">                    
                     <img src="img/emo_grounded_generations_gallery_V3.jpg" style="padding-bottom:15px" class="img-responsive">
-                    <figcaption style="background-color:Thistle;padding:10px">
-                        <b> <font color="white">Curated examples of neural speaker generations with an <i>emotion-grounded</i> speaker variant on
+                    <figcaption style="background-color:#FFECF6;padding:10px">
+                        <b> <font color="black">Curated examples of neural speaker generations with an <i>emotion-grounded</i> speaker variant on
 <i>unseen</i> test images.</b> The grounding emotion (shown in boldface fonts) is predicted during inference time by a separately trained
 image-to-emotion classifier. We ground the speaker’s generation with two emotions for each image, corresponding
 to the most likely (top row) and second most likely (bottom row) predictions. As seen this figure, this variant provides a certain
 control over the output by aligning it to the requested/input emotion. </font>
-<!-- The shown images are included in the datasets covered by Affection, no ownership or copyright claim is made by the authors of this article. -->
                     </figcaption>
                 </figure>
-            </div>
-
-                <!-- #FF42A1 -->
-                <div class="zoom">
+            <!-- </div> -->
+                
+                <!-- <div class="zoom"> -->
                 <figure style="padding-bottom:80px;">
                     <img src="img/effect_of_pragmatics.jpg" style="padding-bottom:15px;" class="img-responsive">
-                    <figcaption style="background-color:Thistle;padding:10px">
-                        <font color="white"><b>Effect of boosting the pragmatic content of neural speaker generations via <a href="https://github.com/openai/CLIP">CLIP</a>.</b> Aside from often correcting the identity of shown objects/actions (right-most image is indeed taken inside an airport), this pragmatic variant tends to use more visual details in its explanations (<i>standing in the sand</i>), and perhaps more importantly to expand the explanation to include non-visual but valid associations (e.g., <i>take a nap</i>, or <i>do not like crowds</i>). </font>
-                        <!-- The shown images are included in the datasets covered by Affection, no ownership or copyright claim is made by the authors of this article. -->
+                    <figcaption style="background-color:#FFECF6;padding:10px">
+                        <font color="black"><b>Effect of boosting the pragmatic content of neural speaker generations via <a href="https://github.com/openai/CLIP" style="color:#FF42A1">CLIP</a>.</b> Aside from often correcting the identity of shown objects/actions (right-most image is indeed taken inside an airport), this pragmatic variant tends to use more visual details in its explanations (<i>standing in the sand</i>), and perhaps more importantly to expand the explanation to include non-visual but valid associations (e.g., <i>take a nap</i>, or <i>do not like crowds</i>). </font>                        
                     </figcaption>
                 </figure>
-                </div>
+                <!-- </div> -->
 
 
-            <figcaption style="background-color:#ff42a1;padding:10px">
-                <b><font color="white"><u>Legal Disclaimer</u></b>: The images shown in the above qualitative results are included in the image-centric datasets covered by our Affection dataset, and which are described in detail in the Section 3, of our <a href="">manuscript</a>. I.e., the datasets of <a href="https://arxiv.org/abs/1405.0312">MS-COCO</a>, <a href="https://ieeexplore.ieee.org/document/8344491">Emotional-Machines</a>, <a href="https://arxiv.org/abs/1505.04870">Flickr30kEntities, <a href="https://arxiv.org/abs/1602.07332">Visual Genome</a> and those included in the work of <a href="https://arxiv.org/pdf/1605.02677.pdf">Quanzeng et al.</a> <b>We do not have or claim any ownership or copyright right for these images. Our work (Affection) is only provided for research puprposes.</b></font>
+            <figcaption style="background-color:#FFECF6;padding:10px">
+                <b><font color="black"><u>Legal Disclaimer</u></b>: The images shown in the above qualitative results are included in the image-centric datasets covered by our Affection dataset, and which are described in detail in the Section 3, of our <a href="">manuscript</a>. I.e., the datasets of <a href="https://arxiv.org/abs/1405.0312">MS-COCO</a>, <a href="https://ieeexplore.ieee.org/document/8344491">Emotional-Machines</a>, <a href="https://arxiv.org/abs/1505.04870">Flickr30kEntities, <a href="https://arxiv.org/abs/1602.07332">Visual Genome</a> and those included in the work of <a href="https://arxiv.org/pdf/1605.02677.pdf">Quanzeng et al.</a> <b>We do not have or claim any ownership or copyright right for these images. Our work (Affection) is only provided for research puprposes.</b></font>
         </figcaption>
 
             
@@ -247,7 +238,7 @@ control over the output by aligning it to the requested/input emotion. </font>
                 <b>The Affection Dataset</b>
             </h3>
         <p>        
-        You will be able to download Affection in a few days (by 12th October 22). Please visit this page again around that time. In the meantime, you can quickly <b>browse the dataset</b> <a>here</a>.</font>
+        You will be able to download Affection in a few days (by 12th October 22). Please visit this page again around that time. In the meantime, you can quickly <b>browse the dataset</b> <a href="">here</a>.</font>
     </p>
 
         <strong>Important Disclaimer:</strong> Affection is a real-world dataset containing the opinion and sentiments of thousands of people. Thus, we expect it to include text with certain biases, factual inaccuracies, and possibly foul language. The provided neural networks are also likely biased and inaccurate, similar to their training data. Their output, subjective opinions, and sentiments present in Affection are not byproducts that express the personal views and preferences of the authors by any means. Please use our work <a href="https://www.nature.com/articles/s41599-020-0501-9">responsibly</a>.
@@ -335,5 +326,12 @@ control over the output by aligning it to the requested/input emotion. </font>
 
 </style>
 
+
+<style>
+a:link, a:visited {  
+  color: #FF42A1;  
+}
+
+</style>
 
 </html>
